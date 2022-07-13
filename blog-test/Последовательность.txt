@@ -1,0 +1,21 @@
+[Создаём приложение]
+1. Создаем проект и виртуальное окружение.
+2. Устанавливаем django.
+3. django-admin startproject siteblog
+4. cd siteblog
+5. python manage.py startapp blog
+6. python manage.py runserver
+7. Регистрируем приложение в settings в INSTALLED_APPS "'blog.apps.BlogConfig'," и меняем язык.
+
+[Настраиваем вьюху]
+8. В блоге создаем urls
+9. В blog.views пишем функцию возврата ответа на главной странице.
+10. В siteblog.urls прописываем маршруты на новый urls приложения.
+11. В blog.views пишем новый маршрут для главной страницы.
+
+[Переносим шаблон в джанго]
+12. Скачиваем шаблон.
+13. Создаем папку static в папке приложения.
+14. Переносим всё в static кроме index.
+15. В setting пишем STATIC_ROOT = os.path.join(BASE_DIR, 'static') и STATICFILES_DIRS = [os.path.join(BASE_DIR, 'siteblog/static'),]
+16. Выполняем python manage.py collectstatic
